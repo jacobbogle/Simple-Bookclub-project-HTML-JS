@@ -1,0 +1,270 @@
+* {
+    margin: .5rem;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10px;
+    
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(21, 21, 26); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(33, 33, 33); 
+  }
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr repeat(4, minmax(auto, 280px)) 1fr 100px;
+    background-image: linear-gradient(to bottom right, 
+    rgb(17, 17, 26), rgb(27, 25, 22));
+}
+
+header {
+    grid-column: 1 /-1;
+    grid-row: 1/2;
+    color: rgb(240, 240, 240);
+    margin-left: 0px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    font-family: 'OCR A';
+    padding: 10px 10px;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 1 / 2;
+    background-color: rgb(72, 72, 72);
+    box-shadow: 10px 15px 15px black;
+}
+
+.dropDown {
+    float: left;
+    overflow: hidden;
+}
+
+
+.dropDown .dropDownButton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(201, 201, 201);
+    margin: 0;
+    font-family: 'OCR A';
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(to bottom right, 
+    rgb(201, 201, 201), rgb(187, 187, 187));
+    min-width: 160px;
+    margin: 0;
+}
+
+.dropDownContent a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: 'OCR A';
+}
+
+.dropDownButton:hover {
+    background-color:rgb(33, 33, 33) ;
+    color: rgb(240, 240, 240)
+}
+
+.dropDownContent a:hover {
+    background-color: rgb(33, 33, 33);
+    color: rgb(240, 240, 240)
+}
+
+.topBox {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+iframe {
+    box-shadow: 0 0 15px 15px rgba(9, 9, 9);
+}
+
+.topBox  .bookRecommend> div {
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.bookRecommend {
+    display: flex;
+}
+
+[class^="bookImage"] {
+    margin: 0;
+}
+
+[class^="bookBox"] a {
+    margin: 0;
+}
+
+[class^="bookBox"] {
+    width: auto;
+    height: 370px;
+    box-shadow: 10px 15px 15px black;
+    background-color: rgb(66, 66, 66);
+}
+
+[class^="bookContent"] {
+    overflow: auto;
+    height: 370px;
+    display: block;
+    visibility: hidden;
+    width: 0px;
+    transition: width 1.2s;
+    box-shadow: 10px 15px 15px black;
+    background-image: linear-gradient(to bottom right, 
+    rgb(66, 66, 66), rgb(78, 78, 78));
+    color: rgb(239, 239, 239);
+}
+
+[class^="bookContent"] p {
+    font-size: medium;
+}
+
+[class^="bookContent"] a {
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+}
+
+[class^="bookContent"] button {
+    padding: 5px 5px;
+    background-color: rgb(17, 17, 26);
+    border: none;
+}
+
+[class^="bookContent"] button:hover {
+    background-color: rgb(171, 171, 171);
+}
+
+[class^="bookContent"] button:hover > a {
+    color: rgb(17, 17, 26);
+}
+
+[class^="bookBox"]:hover {
+    background-color: rgb(171, 171, 171);
+}
+
+main {
+    grid-column: 2/8;
+    grid-row: 3/4;
+    background-image: linear-gradient(to bottom right, 
+    rgb(201, 201, 201), rgb(187, 187, 187));
+    box-shadow: 10px 15px 15px black;
+    margin-top: 100px;
+    color: black;
+}
+
+footer {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    display:flex;
+    flex-direction: column;
+    color:  rgb(240, 240, 240);
+    font-size: .70em;
+    font-style: italic;
+    text-align: center;
+    padding: 1em;  
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+footer a {
+    color:  rgb(240, 240, 240);
+}
+
+@media only screen and (max-width: 1260px) {
+    [class^="bookContent"] {
+        display: block;
+    }
+
+    .topBox {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 684px) {
+    iframe{
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        padding-left: 100px;
+    }
+
+    .topBox {
+        margin-top: 0.5rem;
+    }
+
+   .bookRecommend {
+       flex-direction: column;
+   }
+
+   [class^="bookBox"] {
+    height: auto ;
+    width: auto;
+   }
+
+   [class^="bookBox"] img {
+        max-height: 100% ;
+        height: auto ;
+        width: 100%;
+    }
+
+    [class^="bookContent"] {
+        height: 0px;
+        transition: width 1.2s, height 1s;
+    }
+
+    [class^="bookBox"]:hover + [class^="bookContent"], [class^="bookContent"]:hover {
+        visibility:visible;
+    }
+    
+    main {
+        grid-column: 1 / -1;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        margin-top: 0.5rem;
+    }
+}

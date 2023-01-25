@@ -1,0 +1,49 @@
+main {
+    box-shadow: none;
+    background-image: none;
+}
+
+#arcadeSelection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: inherit;
+    background-image: none;
+}
+
+.retroGame {
+    background-color: rgb(66, 66, 66);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding: 10px 10px;
+    box-shadow: 10px 15px 15px black;
+}
+.retroGame:hover {
+    background-color: rgb(171, 171, 171);
+}
+
+.retroGame a, img {
+    width: inherit;
+    height: inherit;
+    margin: 0%;
+}
+
+.retroGame a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer img {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+@media only screen and (max-width: 1260px) {
+    
+
+}
+
+@media only screen and (max-width: 684px) {
+
+}

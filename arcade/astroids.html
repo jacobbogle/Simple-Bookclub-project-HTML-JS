@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG Fcition : : Asteroids</title>
+    <link rel="stylesheet" href="../home/style.css">
+    <link rel="stylesheet" href="styleAstroids.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <meta name="description" content="Gamers get fiction unlike any other. Join us in the fun. This game is from Margaux on codepen.io. Have fun playing Asteroids.">
+</head>
+<body ondragstart="return false">
+    <header><h1><a href="../index.html">GG Fiction</a></h1></header>
+    <nav class="dropDown">
+        <button onclick="displayDropDownConetent()" class="dropDownButton">Menu</button>
+        <div class="dropDownContent" style="display: none;">
+            <a href="../index.html">Home</a>
+            <a href="../books/books.html">Books</a>
+            <!--<a href="op1">Video Games</a>
+            <a href="op2">Board Games</a>-->
+            <a href="arcade.html">Arcade</a>
+            <!--<a href="op4">About Us</a>
+            <a href="op4">Contact Us</a>-->
+        </div>
+    </nav>
+    <main id="astroids">
+        <div class="wrapper" tabindex="0">
+            <canvas id="gameCanvas" width="900" height="600"></canvas>
+        </div>  
+        <div id="instructions">
+            <div class="commands"><kbd><i class="fas fa-arrow-up" aria-hidden="true" aria-label="up arrow key"></i></kbd>propel the ship</div>
+            <div class="commands"><kbd><i class="fas fa-arrow-left" aria-hidden="true" aria-label="left arrow key"></i></kbd><kbd><i class="fas fa-arrow-right" aria-hidden="true" aria-label="right arrow key"></i></kbd>move the ship</div>
+            <div class="commands"><kbd>Space</kbd>shoot lasers</div>
+        </div>
+        <div class="volume">
+            <i id="music" class="fas fa-music mute" aria-hidden="true" aria-label="sound off"></i>
+            <div id="sound"><i class="fas fa-volume-mute" aria-hidden="true" aria-label="sound off"></i></div>
+        </div>
+        <p id="alert">Sorry, you can't play from a mobile or a tablet...</p>
+        
+    </main>
+    <footer>
+        <div class="codedBy">
+            <p>Code from:</p>
+            <a href="https://codepen.io/Margaux-dev">Margaux Darriberouge</a>
+        </div>
+        <img src="../home/images/gg fiction logo.png" alt="gg fiction logo" width="100px" height="100px">
+        <p>    
+            Copyright &copy; 2022 GG Fiction<br />
+            <a href="mailto:gamersgetfiction@gmail.com">gamersgetfiction@gmail.com</a>
+        </p>
+    </footer>
+</body>
+<script src="script_astroids.js"></script>
+<script src="../home/script.js"></script>
+</html>
